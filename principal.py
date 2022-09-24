@@ -34,16 +34,18 @@ def agregarRegistro():
 def modificarRegistro():
     print("Editar Registro ")
     cod = input("Código: ")
-    inv, pos = listaInv.buscarPorCodigo(cod)
-    print(f"""Nombres Actual: {inv.Nombres}
-Precio actual: {inv.Precios}
-New Descripcion: {inv.Descripcion}""")
+    pro, pos = listaInv.buscarporCodigo(cod)
+    print(f"""Nombres Actual: {pro.Nombres}
+Precio actual: {pro.Precios}
+Descripcion actual: {pro.Descripcion}""")
 
     print("Nuevos Datos")
     nuevoNombre = input("Nombres: ")
-    nuevoPrecio = input("Precio: ")
-    nuevoDescripcion = input("Descripcion: ")
-    newInv = inv(cod, nuevoNombre, nuevoPrecio, nuevoDescripcion,)
+    nuevoPrecio = int(input("Precio: "))
+    nuevoDescripcions = input("Descripcion: ")
+    nuevaExistencia= int(input("Existencia: "))
+    nuevaMin= int(input("Minimo: "))
+    newInv = inv(pro.Codigo,nuevoNombre,nuevoDescripcions,nuevoPrecio,nuevaExistencia,nuevaMin)
     listaInv.editarElemento(newInv, pos)
 
 def eliminarRegistro():
