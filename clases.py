@@ -1,11 +1,11 @@
 class Inventario:
 
-    def __init__(self, cod, nom, des, pre,min,exi):
+    def __init__(self, cod, nom, des, pre,min,exis):
         self.Codigo = cod
         self.Descripcion= des
         self.Nombres = nom
         self.Precios = pre
-        self.Existencia = exi
+        self.Existencia = exis
         self.Minimo = min #Becado sera un valor booleano
     
     def __str__(self):
@@ -82,5 +82,6 @@ class ListadoInv:
             pos+=1
         except Exception as ex:
             print("Error al buscar elemento:", str(ex))
+
 
   

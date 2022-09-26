@@ -9,6 +9,7 @@ def menu():
     print("5. Buscar por Nombre")
     print("6. Buscar por Precio")
     print("7. Mostrar Productos")
+    print("8. Mostrar productos menor a minimo")
     print("10. Salir")
     op = int(input("Escriba su opción: "))
     return op
@@ -98,6 +99,13 @@ def mostrarRegistros():
     for inventario in listaInv.lista:
         print(inventario)
         print("="*30)
+
+def mostrarMenoraMinimo():
+    for inventario in listaInv.lista:
+        if(inventario.Existencia<inventario.Minimo):
+            print(inventario)
+            print("="*30)
+
    
 def main():
     op = 0
@@ -110,6 +118,7 @@ def main():
         elif op == 5: buscarporNombre()
         elif op == 6: buscarporPrecio()
         elif op == 7: mostrarRegistros()
+        elif op == 8: mostrarMenoraMinimo()
         elif op == 10: print("hola papu")
         else: print("Opcion no valida")
 
